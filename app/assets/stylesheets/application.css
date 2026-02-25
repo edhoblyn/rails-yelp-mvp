@@ -8,3 +8,122 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+/* --- Base --- */
+body {
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Navbar polish (works with the navbar I suggested) --- */
+.navbar {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* --- Page headings --- */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.2px;
+}
+
+h1.h3,
+h2.h4 {
+  font-weight: 700;
+}
+
+/* --- Cards --- */
+.card {
+  border: 0;
+  border-radius: 14px;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 10px 25px rgba(31, 41, 55, 0.08) !important;
+}
+
+.card .card-body {
+  padding: 1.25rem;
+}
+
+/* --- Restaurant grid cards --- */
+.card-title a {
+  color: #111827;
+}
+
+.card-title a:hover {
+  color: #0d6efd;
+  /* Bootstrap primary */
+  text-decoration: none;
+}
+
+/* --- Badges --- */
+.badge {
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+}
+
+/* --- Buttons --- */
+.btn {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.25);
+}
+
+.btn-outline-secondary:hover {
+  box-shadow: 0 8px 18px rgba(108, 117, 125, 0.2);
+}
+
+/* --- Reviews list --- */
+.list-group {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.list-group-item {
+  border: 0;
+  border-bottom: 1px solid rgba(31, 41, 55, 0.08);
+  padding: 1rem 1.1rem;
+}
+
+.list-group-item:last-child {
+  border-bottom: 0;
+}
+
+/* --- Forms --- */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(13, 110, 253, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* --- Small helpers --- */
+.page-title {
+  font-weight: 800;
+  text-align: center;
+}

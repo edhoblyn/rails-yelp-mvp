@@ -5,7 +5,6 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @review = Review.new
   end
 
   def new
@@ -14,10 +13,11 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+
     if @restaurant.save
-      refirect_to restaurant_path(@restaurant)
+      redirect_to restaurant_path(@restaurant)
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 

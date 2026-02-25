@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="h4 m-0">New Review</h1>
+          <%= link_to "Back", restaurant_path(@restaurant), class: "btn btn-outline-secondary btn-sm" %>
+        </div>
+
+        <%= simple_form_for [@restaurant, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating, collection: 0..5, prompt: "Pick a rating" %>
+          <%= f.button :submit, class: "btn btn-primary w-100" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

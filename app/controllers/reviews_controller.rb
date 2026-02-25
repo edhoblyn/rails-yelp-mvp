@@ -12,13 +12,13 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
   private
 
   def review_params
-    params.require(:review).premit(:content, :rating)
+    params.require(:review).permit(:content, :rating)
   end
 end

@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="h3 m-0">New Restaurant</h1>
+          <%= link_to "Back", restaurants_path, class: "btn btn-outline-secondary btn-sm" %>
+        </div>
+
+        <%= simple_form_for @restaurant do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+          <%= f.input :category, collection: Restaurant::CATEGORIES, prompt: "Choose a category" %>
+          <%= f.button :submit, class: "btn btn-primary w-100" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
